@@ -9,6 +9,7 @@ import Users from './users'
 import Users2 from './users2'
 import Employee2 from './employee2'
 import Products from './products'
+import Employeees3 from './employees3.jsx'
 
 
 function App() {
@@ -25,9 +26,11 @@ function App() {
       {/* <Employees /> */}
       {/* <Employee2 /> */}
 
-      <Products />
+      {/* <Products /> */}
       {/* <Users /> */}
       {/* <Users2 /> */}
+
+      <Employeees3 />  
     </>
   )
 }
