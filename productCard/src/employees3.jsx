@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useReducer, useState } from "react";
 import EmployeeCard from "./components/EmployeeCard";
 
 export default function Employees3() {
@@ -24,6 +24,20 @@ export default function Employees3() {
       salary: 35000,
     },
   ]);
+
+
+  const [state, dispatch] = useReducer(reducer, employees);
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "Add Employee":
+        return [...state, action.payload];
+      case "Delete Employee":
+        return state.filter((employee) => employee.id !== action.payload);
+      default:
+        return state;
+    }
+  }
 
 
   const [count, setCount] = useState(0)
