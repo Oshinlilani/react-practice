@@ -13,6 +13,11 @@ function EmployeeCard({ employee, onDelete }) {
       <p>Salary: {employee.salary}</p>
       <button className="bg-blue-400 text-white px-2 py-1 rounded-xl" onClick={() => alert(`Employee ID: ${employee.id}`)}>Show ID</button>
       <button onClick={() => onDelete(employee.id)}>Delete</button>
+
+
+      <div>
+        
+      </div>
     </div>
   );
 }
